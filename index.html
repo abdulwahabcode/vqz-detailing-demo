@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VQZ Detailing | Mobile Car Detailing in Albuquerque, NM</title>
+<meta name="description" content="VQZ Detailing — premium mobile car detailing in Albuquerque, NM. We come to you. Interior detail, wash & wax, ceramic sealant and more.">
+<style>
+:root{
+  --graphite:#161A21;    /* tinted black, 60% */
+  --graphite-2:#0F1218;  /* alt dark */
+  --steel:#232A35;       /* 30% panels */
+  --silver:#9AA6B5;      /* secondary text/lines */
+  --brass:#C79C5A;       /* 10% accent */
+  --brass-deep:#A67F42;
+  --offwhite:#EAEFF5;
+  --muted:#8B97A5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;background:var(--graphite);color:var(--offwhite);line-height:1.65;overflow-x:hidden}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* ---------- NAV ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(15,18,24,.96);border-bottom:1px solid #2c3542}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--offwhite)}
+.brand-mark{width:38px;height:38px;background:linear-gradient(135deg,var(--brass),var(--brass-deep));transform:skewX(-10deg);display:grid;place-items:center;flex:none}
+.brand-mark svg{width:22px;height:22px;stroke:#14100a;fill:none;stroke-width:2.2;transform:skewX(10deg)}
+.brand b{font-size:1.05rem;letter-spacing:2.5px}
+.brand small{display:block;font-size:.62rem;letter-spacing:3px;color:var(--silver)}
+nav.links{display:flex;gap:28px}
+nav.links a{color:var(--silver);text-decoration:none;font-size:.9rem;letter-spacing:1px}
+nav.links a:hover{color:var(--brass)}
+.book-btn{background:var(--brass);color:#14100a;font-weight:800;padding:10px 22px;text-decoration:none;font-size:.9rem;letter-spacing:.5px;transform:skewX(-10deg);display:inline-block}
+.book-btn span{display:inline-block;transform:skewX(10deg)}
+.book-btn:hover{background:#d9ae68}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.menu-toggle span{display:block;width:26px;height:3px;background:var(--offwhite);margin:5px 0;border-radius:2px}
+@media(max-width:820px){
+  nav.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--graphite-2);flex-direction:column;padding:18px 24px 22px;gap:16px;border-bottom:1px solid #2c3542}
+  nav.links.open{display:flex}
+  .menu-toggle{display:block}
+  .nav .book-btn{display:none}
+  header .wrap{position:relative}
+}
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:96px 0 110px;overflow:hidden;
+  background:linear-gradient(120deg,var(--graphite-2) 55%,var(--steel) 55.2%,var(--steel) 100%)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(115deg,transparent 0 90px,rgba(199,156,90,.05) 90px 92px)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+.hero-eyebrow{display:inline-block;font-size:.75rem;letter-spacing:4px;color:var(--brass);text-transform:uppercase;margin-bottom:16px;border-left:3px solid var(--brass);padding-left:14px}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.06;font-weight:800;margin-bottom:18px;letter-spacing:-.5px}
+.hero h1 .shine{color:var(--brass)}
+.hero p.lead{color:var(--muted);font-size:1.05rem;max-width:32rem;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.btn-primary{background:var(--brass);color:#14100a;font-weight:800;padding:15px 34px;text-decoration:none;font-size:1rem;transform:skewX(-10deg);display:inline-block}
+.btn-primary span{display:inline-block;transform:skewX(10deg)}
+.btn-primary:hover{background:#d9ae68}
+.btn-ghost{border:1px solid #3d4756;color:var(--offwhite);font-weight:700;padding:14px 30px;text-decoration:none;font-size:1rem}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass)}
+.hero-stats{display:flex;gap:30px;flex-wrap:wrap}
+.hstat .mono{font-size:.72rem;letter-spacing:2px;color:var(--silver)}
+.hstat b{display:block;font-size:1.5rem;color:var(--offwhite)}
+.hero-panel{background:var(--steel);border:1px solid #39434f;border-top:4px solid var(--brass);padding:28px;transform:skewX(-4deg)}
+.hero-panel>div{transform:skewX(4deg)}
+.hero-panel h3{font-size:1.2rem;margin-bottom:8px}
+.hero-panel p{color:var(--muted);font-size:.93rem;margin-bottom:18px}
+.checklist{list-style:none;font-size:.93rem}
+.checklist li{padding:9px 0;border-bottom:1px dashed #39434f;display:flex;gap:10px;align-items:center}
+.checklist li:last-child{border:0}
+.checklist .dot{width:10px;height:10px;background:var(--brass);transform:rotate(45deg);flex:none}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero{background:var(--graphite-2);padding:64px 0 76px}}
+/* ---------- SECTIONS ---------- */
+section{padding:76px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:40px;flex-wrap:wrap}
+.sec-tag{font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:10px}
+.sec-title{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;letter-spacing:-.5px}
+.sec-sub{color:var(--muted);max-width:36rem;margin-top:8px}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--steel);border:1px solid #2e3641;padding:26px;position:relative;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--brass);transform:translateY(-4px)}
+.svc .code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:2px;color:var(--silver);display:block;margin-bottom:12px}
+.svc h3{font-size:1.12rem;margin-bottom:8px}
+.svc p{font-size:.9rem;color:var(--muted)}
+.svc .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--brass);transition:width .3s}
+.svc:hover .bar{width:100%}
+/* why */
+.why{background:var(--graphite-2);border-top:1px solid #232a35;border-bottom:1px solid #232a35}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #2e3641}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.why-grid{grid-template-columns:1fr}}
+.why-cell{padding:30px 26px;border-right:1px solid #2e3641}
+.why-cell:last-child{border-right:0}
+@media(max-width:900px){.why-cell{border-bottom:1px solid #2e3641}}
+.why-cell .mono{color:var(--brass);font-size:.72rem;letter-spacing:3px}
+.why-cell h3{font-size:1.05rem;margin:10px 0 8px}
+.why-cell p{font-size:.88rem;color:var(--muted)}
+/* area */
+.area-strip{background:var(--steel);border:1px solid #2e3641;padding:36px;text-align:center}
+.area-strip h3{font-size:1.3rem;margin-bottom:6px}
+.area-strip p{color:var(--muted);font-size:.93rem;margin-bottom:22px}
+.towns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.towns span{border:1px solid #3d4756;padding:8px 18px;font-size:.88rem;letter-spacing:1px;color:var(--silver)}
+.towns span.home{background:var(--brass);border-color:var(--brass);color:#14100a;font-weight:800}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
+.info-card{background:var(--steel);border:1px solid #2e3641;padding:32px}
+.info-card h3{font-size:1.3rem;margin-bottom:6px}
+.info-card>p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.info-line{padding:13px 0;border-bottom:1px dashed #39434f}
+.info-line small{display:block;font-size:.72rem;letter-spacing:2.5px;color:var(--silver);text-transform:uppercase}
+.info-line a,.info-line b{color:var(--offwhite);text-decoration:none;font-size:1.05rem;font-weight:700}
+.info-line a:hover{color:var(--brass)}
+form{background:var(--graphite-2);border:1px solid #2e3641;padding:32px}
+form h3{margin-bottom:4px;font-size:1.25rem}
+form>p{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+label{display:block;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--silver);margin:16px 0 7px;font-weight:700}
+input,select,textarea{width:100%;padding:12px 14px;background:var(--steel);border:1px solid #3d4756;border-radius:0;color:var(--offwhite);font-size:1rem;font-family:inherit;max-width:100%}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--brass);border-color:var(--brass)}
+select option{background:var(--steel)}
+textarea{min-height:100px;resize:vertical}
+button.submit{background:var(--brass);color:#14100a;border:0;font-weight:800;font-size:1rem;padding:15px;width:100%;margin-top:20px;cursor:pointer;letter-spacing:1px}
+button.submit:hover{background:#d9ae68}
+footer{background:#0c0e12;border-top:1px solid #232a35;padding:28px 0;font-size:.85rem;color:var(--silver)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+footer a{color:var(--brass);text-decoration:none}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M5 17c2-4 4-7 7-10l5-3 2 2-3 5c-3 3-6 5-10 7l-3 1z"/><path d="M4 21l4-4"/></svg></span>
+      <span><b>VQZ</b><small>DETAILING · ABQ</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav.links').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <nav class="links">
+      <a href="#services">SERVICES</a>
+      <a href="#why">WHY VQZ</a>
+      <a href="#area">SERVICE AREA</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <a class="book-btn" href="#contact"><span>Book a Detail</span></a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-eyebrow">Mobile Detailing · Albuquerque, NM</span>
+      <h1>Showroom <span class="shine">Shine.</span><br>Zero Driveway Time.</h1>
+      <p class="lead">VQZ Detailing brings the full detail shop to your driveway — water, power and everything we need on board. Your car never leaves home.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#contact"><span>Get a Free Quote</span></a>
+        <a class="btn-ghost" href="mailto:vqz.detailing17@gmail.com">Email VQZ</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="mono">/ MOBILE</span><b>100% mobile</b></div>
+        <div class="hstat"><span class="mono">/ FREE</span><b>Free estimates</b></div>
+        <div class="hstat"><span class="mono">/ LOCAL</span><b>ABQ based</b></div>
+      </div>
+    </div>
+    <div class="hero-panel reveal">
+      <div>
+        <h3>How it works</h3>
+        <p>Simple: you book, we drive to you, and the car comes back to life.</p>
+        <ul class="checklist">
+          <li><span class="dot"></span>You pick a time and place</li>
+          <li><span class="dot"></span>We arrive with water &amp; power</li>
+          <li><span class="dot"></span>We detail — you go about your day</li>
+          <li><span class="dot"></span>Final walkaround before we leave</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-tag">Services</div><h2 class="sec-title">Detail Packages &amp; Services</h2></div>
+      <p class="sec-sub">From maintenance washes to full transformations — every service done by hand, with pro-grade products.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><span class="code">/ 01</span><h3>Full Interior Detail</h3><p>Deep vacuum, steam-cleaned upholstery, leather cleaned and conditioned, vents, crevices and glass — the cabin feels new again.</p><span class="bar"></span></div>
+      <div class="svc reveal"><span class="code">/ 02</span><h3>Exterior Wash &amp; Wax</h3><p>Two-bucket hand wash, wheels and tires deep-cleaned and dressed, finished with a durable spray wax for months of gloss.</p><span class="bar"></span></div>
+      <div class="svc reveal"><span class="code">/ 03</span><h3>Clay Bar Decontamination</h3><p>Clay treatment pulls embedded road grime and industrial fallout from the paint, leaving it glass-smooth before wax or sealant.</p><span class="bar"></span></div>
+      <div class="svc reveal"><span class="code">/ 04</span><h3>Headlight Restoration</h3><p>Cloudy, yellowed headlights sanded, polished and sealed — brighter night driving and a sharper front end.</p><span class="bar"></span></div>
+      <div class="svc reveal"><span class="code">/ 05</span><h3>Engine Bay Cleaning</h3><p>Careful degrease and dressing of the engine bay — no damage, just a clean engine that looks as good as it runs.</p><span class="bar"></span></div>
+      <div class="svc reveal"><span class="code">/ 06</span><h3>Ceramic Spray Sealant</h3><p>A long-lasting ceramic spray coating for serious water beading and paint protection — the easy upgrade that keeps working.</p><span class="bar"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-tag">Why VQZ</div><h2 class="sec-title">Why ABQ Chooses VQZ</h2></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-cell reveal"><span class="mono">/ MOB</span><h3>We Come to You</h3><p>Home, office or apartment — our rig carries its own water and power. No shop visit, no waiting room.</p></div>
+      <div class="why-cell reveal"><span class="mono">/ PRO</span><h3>Pro Products, Real Technique</h3><p>Proper wash methods, quality chemicals and careful technique — no swirl marks, no shortcuts.</p></div>
+      <div class="why-cell reveal"><span class="mono">/ FIX</span><h3>Upfront Pricing</h3><p>You approve the price before we start. The quote you get is the price you pay.</p></div>
+      <div class="why-cell reveal"><span class="mono">/ LOC</span><h3>Local &amp; Accountable</h3><p>Albuquerque based. Final walkaround on every job — if it's not right, we make it right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="area-strip reveal">
+      <div class="sec-tag">Service Area</div>
+      <h3>Serving the Greater Albuquerque Area</h3>
+      <p>Fully mobile — if you're in these areas, we'll come to you.</p>
+      <div class="towns">
+        <span class="home">Albuquerque</span>
+        <span>Rio Rancho</span>
+        <span>Corrales</span>
+        <span>Bernalillo</span>
+        <span>Los Lunas</span>
+        <span>Bosque Farms</span>
+        <span>Edgewood</span>
+        <span>Tijeras</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-tag">Contact</div><h2 class="sec-title">Book Your Detail</h2></div>
+      <p class="sec-sub">Tell us about your vehicle — we reply with a free quote, usually the same day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card reveal">
+        <h3>Get in touch</h3>
+        <p>Email is the fastest way to book — send your vehicle details and we'll reply with a quote.</p>
+        <div class="info-line"><small>Email</small><a href="mailto:vqz.detailing17@gmail.com">vqz.detailing17@gmail.com</a></div>
+        <div class="info-line"><small>Based in</small><b>Albuquerque, NM</b></div>
+        <div class="info-line"><small>Availability</small><b>7 days a week</b></div>
+      </div>
+      <form id="quoteForm" class="reveal">
+        <h3>Request a quote</h3>
+        <p>Your message opens in your email app, addressed straight to VQZ.</p>
+        <label for="qname">Name</label><input id="qname" required placeholder="Your name">
+        <label for="qphone">Phone</label><input id="qphone" type="tel" placeholder="(555) 000-0000">
+        <label for="qveh">Vehicle</label><input id="qveh" placeholder="e.g. 2021 Ford F-150, crew cab">
+        <label for="qsvc">Service</label>
+        <select id="qsvc"><option>Full Interior Detail</option><option>Exterior Wash &amp; Wax</option><option>Full Detail (Interior + Exterior)</option><option>Clay Bar &amp; Decontamination</option><option>Headlight Restoration</option><option>Engine Bay Cleaning</option><option>Ceramic Spray Sealant</option></select>
+        <label for="qmsg">Details</label><textarea id="qmsg" placeholder="Condition, location, preferred days..."></textarea>
+        <button class="submit" type="submit">Send Booking Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 VQZ Detailing · Albuquerque, NM</span>
+    <span><a href="#">Demo by Wahab Codes</a></span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav.links').classList.toggle('open')));
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var body="Name: "+document.getElementById('qname').value+"%0D%0A"
+    +"Phone: "+document.getElementById('qphone').value+"%0D%0A"
+    +"Vehicle: "+document.getElementById('qveh').value+"%0D%0A"
+    +"Service: "+document.getElementById('qsvc').value+"%0D%0A%0D%0A"
+    +"Details:%0D%0A"+encodeURIComponent(document.getElementById('qmsg').value);
+  window.location.href="mailto:vqz.detailing17@gmail.com?subject="+encodeURIComponent("Detail Booking Request — "+document.getElementById('qname').value)+"&body="+body;
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
